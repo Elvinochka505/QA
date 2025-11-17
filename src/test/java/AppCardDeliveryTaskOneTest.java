@@ -13,7 +13,6 @@ import java.time.format.DateTimeFormatter;
 import static com.codeborne.selenide.Selenide.*;
 
 
-
 public class AppCardDeliveryTaskOneTest {
 
     @BeforeEach
@@ -36,9 +35,9 @@ public class AppCardDeliveryTaskOneTest {
         $("[data-test-id='phone'] input").setValue("+79051234545");
         $("[data-test-id='agreement']").click();
         $("button.button").click();
-        $( ".notifacion__content")
-        .should(Condition.visible, Duration. ofSeconds(15))
-        .should(Condition.text("Встреча успешно забронирована на " + planningDate));
+        $(".notifacion__content")
+                .should(Condition.visible, Duration.ofSeconds(15))
+                .should(Condition.text("Встреча успешно забронирована на " + planningDate));
     }
 
 }
