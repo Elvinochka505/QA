@@ -35,7 +35,7 @@ public class AppCardDeliveryTaskOneTest {
         $("[data-test-id='phone'] input").setValue("+79051234545");
         $("[data-test-id='agreement']").click();
         $("button.button").click();
-        $(".notifacion__content")
+        $("[data-test-id='notification']")
                 .should(Condition.visible, Duration.ofSeconds(15))
                 .should(Condition.text("Встреча успешно забронирована на " + planningDate));
     }
